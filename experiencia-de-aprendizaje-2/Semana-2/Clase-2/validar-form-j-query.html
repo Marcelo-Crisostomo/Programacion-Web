@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Validación</title>
+    <!-- Se incluye la biblioteca jQuery desde una CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Inicio del formulario con id "formulario" -->
+    <form id="formulario">
+        <!-- Etiqueta y campo de entrada para el RUT -->
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut"><br>
+
+        <!-- Etiqueta y campo de entrada para el Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <!-- Etiqueta y campo de entrada para el Apellido Paterno -->
+        <label for="apellidoPaterno">Apellido Paterno:</label>
+        <input type="text" id="apellidoPaterno" name="apellidoPaterno"><br>
+
+        <!-- Etiqueta y campo de entrada para el Apellido Materno -->
+        <label for="apellidoMaterno">Apellido Materno:</label>
+        <input type="text" id="apellidoMaterno" name="apellidoMaterno"><br>
+
+        <!-- Etiqueta y campo de entrada para la Edad (tipo number) -->
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad"><br>
+
+        <!-- Etiqueta y menú desplegable para el Género -->
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero">
+            <option value="">Seleccione uno</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select><br>
+
+        <!-- Etiqueta y campo de entrada para el Celular (tipo tel) -->
+        <label for="celular">Celular:</label>
+        <input type="tel" id="celular" name="celular"><br>
+
+        <!-- Botón de envío del formulario -->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Inicio del script de jQuery -->
+    <script>
+        // Esperar a que el DOM esté listo
+        $(document).ready(function() {
+            // Manejar el evento submit del formulario
+            $('#formulario').submit(function(event) {
+                // Validar RUT
+                let rut = $('#rut').val(); // Obtener el valor del campo RUT
+                if (rut.length < 9 || rut.length > 10) { // Verificar la longitud del RUT
+                    alert('El RUT debe tener entre 9 y 10 caracteres'); // Mostrar alerta si no cumple
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Validar Nombre
+                let nombre = $('#nombre').val(); // Obtener el valor del campo Nombre
+                if (nombre.length < 3 || nombre.length > 20) { // Verificar la longitud del Nombre
+                    alert('El Nombre debe tener entre 3 y 20 caracteres'); // Mostrar alerta si no cumple
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Validar Apellido Paterno
+                let apellidoPaterno = $('#apellidoPaterno').val(); // Obtener el valor del campo Apellido Paterno
+                if (apellidoPaterno.length < 3 || apellidoPaterno.length > 20) { // Verificar la longitud del Apellido Paterno
+                    alert('El Apellido Paterno debe tener entre 3 y 20 caracteres'); // Mostrar alerta si no cumple
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Validar Apellido Materno
+                let apellidoMaterno = $('#apellidoMaterno').val(); // Obtener el valor del campo Apellido Materno
+                if (apellidoMaterno.length < 3 || apellidoMaterno.length > 20) { // Verificar la longitud del Apellido Materno
+                    alert('El Apellido Materno debe tener entre 3 y 20 caracteres'); // Mostrar alerta si no cumple
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Validar Edad
+                let edad = $('#edad').val(); // Obtener el valor del campo Edad
+                if (edad < 18 || edad > 35) { // Verificar el rango de edad
+                    alert('La Edad debe estar entre 18 y 35 años'); // Mostrar alerta si no cumple
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Validar Género
+                let genero = $('#genero').val(); // Obtener el valor del campo Género
+                if (genero === '') { // Verificar si se ha seleccionado un género
+                    alert('Debe seleccionar un Género'); // Mostrar alerta si no se ha seleccionado
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Validar Celular
+                let celular = $('#celular').val(); // Obtener el valor del campo Celular
+                if (celular.length < 9 || celular.length > 12) { // Verificar la longitud del Celular
+                    alert('El Celular debe tener entre 9 y 12 caracteres'); // Mostrar alerta si no cumple
+                    return false; // Cancelar el envío del formulario
+                }
+
+                // Si todas las validaciones pasan, permitir el envío del formulario
+                return true;
+            });
+        });
+    </script>
+</body>
+</html>
