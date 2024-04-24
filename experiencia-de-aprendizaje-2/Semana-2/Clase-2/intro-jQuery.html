@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo jQuery y Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container my-5">
+    <h1>Ejemplo jQuery y Bootstrap</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Cargar contenido con .load()</h2>
+        <div id="contenido-load"></div>
+        <button class="btn btn-primary" id="cargar-contenido">Cargar Contenido</button>
+      </div>
+      <div class="col-md-6">
+        <h2>Obtener datos con .get()</h2>
+        <div id="contenido-get"></div>
+        <button class="btn btn-success" id="obtener-datos">Obtener Datos</button>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h2>Enviar datos con .post()</h2>
+        <form id="formulario-post">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div id="respuesta-post"></div>
+      </div>
+      <div class="col-md-6">
+        <h2>Usar .ajax()</h2>
+        <div id="contenido-ajax"></div>
+        <button class="btn btn-warning" id="realizar-ajax">Realizar Ajax</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/actions.js"></script>
+</body>
+</html>
