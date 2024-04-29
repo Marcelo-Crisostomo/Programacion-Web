@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaración XML: indica la versión y codificación del documento -->
+<usuarios>
+    <!-- Elemento raíz: representa una lista de usuarios -->
+    <usuario>
+        <!-- Elemento "usuario": representa un usuario individual -->
+        <id>1</id>
+        <!-- Elemento "id": contiene el identificador único del usuario -->
+        <nombre>Miguelito </nombre>
+        <!-- Elemento "nombre": contiene el nombre completo del usuario -->
+        <email>john@example.com</email>
+        <!-- Elemento "email": contiene la dirección de correo electrónico del usuario -->
+    </usuario>
+    <!-- Fin del elemento "usuario" -->
+    <usuario>
+        <!-- Otro elemento "usuario" que representa un usuario diferente -->
+        <id>2</id>
+        <nombre>Jane Smith</nombre>
+        <email>jane@example.com</email>
+    </usuario>
+    <!-- Fin del segundo elemento "usuario" -->
+    <usuario>
+        <!-- Un tercer elemento "usuario" que representa otro usuario -->
+        <id>3</id>
+        <nombre>Mike Johnson</nombre>
+        <email>mike@example.com</email>
+    </usuario>
+    <!-- Fin del tercer elemento "usuario" -->
+</usuarios>
+<!-- Fin del elemento raíz "usuarios" -->
