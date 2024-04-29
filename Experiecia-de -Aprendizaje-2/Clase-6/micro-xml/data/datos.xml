@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Declaración XML: indica la versión y codificación del documento -->
-<usuarios>
+<usuarios> 
     <!-- Elemento raíz: representa una lista de usuarios -->
     <usuario>
         <!-- Elemento "usuario": representa un usuario individual -->
